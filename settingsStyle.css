@@ -1,0 +1,145 @@
+.general {
+  height: 1000px;
+}
+
+.settings-general {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.demo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(67, 67, 67);
+  color: rgb(203, 203, 203);
+  font-size: 19px;
+}
+
+.winner__container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.winner__container::before {
+  display: none;
+}
+
+.winner__container::after {
+  display: none;
+}
+
+.checkbox-settings {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  accent-color: rgb(170, 255, 0);
+  cursor: pointer;
+}
+
+.saved_notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 170px;
+  height: 40px;
+  background-color: gray;
+  color: azure;
+  top: 400px;
+  font-size: 22px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+.buttons__container {
+  padding: 0px;
+}
+
+/*Save button in this file*/
+.start__btn {
+  background-color: gray;
+}
+
+.start__btn:active {
+  background-color: rgb(67, 67, 67);
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 10px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: clamp(360px, 50vw, 500px);
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 56px;
+  width: 100%;
+  font-size: 17.5px;
+  background-color: rgb(67, 67, 67);
+  color: rgb(203, 203, 203);
+  border-radius: 18px;
+  box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  padding: 7px 7px 7px 12px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.participant-name {
+  max-width: 141px;
+  /* user-select: none; */
+}
+
+.card>input {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  accent-color: rgb(170, 255, 0);
+}
+
+.is-card-marked {
+  /* background-color: rgb(255, 48, 48);
+  color: rgb(174, 174, 174); */
+  background-color: rgba(104, 104, 104, 0.1);
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.5);
+  color: rgb(146, 146, 146);
+}
+
+
+@media (max-width: 600px) {
+  .list-container {
+    width: clamp(290px, 66vw, 600px);
+  }
+
+  .winner__container {
+    width: clamp(290px, 66vw, 600px);
+  }
+
+  .card {
+    font-size: 16.5px;
+    border-radius: 18px;
+  }
+
+  .participant-name {
+    max-width: 90px;
+  }
+}

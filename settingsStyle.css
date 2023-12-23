@@ -23,7 +23,9 @@
 .winner__container {
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 54px;
+  background-color: rgb(23, 23, 23);
+  background-color: rgb(67, 19, 67);
 }
 
 .winner__container::before {
@@ -47,9 +49,9 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 170px;
-  height: 40px;
-  background-color: gray;
+  width: 190px;
+  height: 60px;
+  background-color: rgba(28, 129, 28, 0.88);
   color: azure;
   top: 400px;
   font-size: 22px;
@@ -63,7 +65,7 @@
 
 /*Save button in this file*/
 .start__btn {
-  background-color: gray;
+  background-color: rgb(28, 129, 28); /*Darker Limegreen*/
 }
 
 .start__btn:active {
@@ -80,7 +82,7 @@
   width: clamp(360px, 50vw, 500px);
   box-sizing: border-box;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .card {
@@ -91,16 +93,19 @@
   height: 56px;
   width: 100%;
   font-size: 17.5px;
-  background-color: rgb(67, 67, 67);
+  /* background-color: rgb(67, 67, 67); */
+  background-color: rgb(36, 36, 36);
   color: rgb(203, 203, 203);
   border-radius: 18px;
-  box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7);
+  /* box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7); */
   box-sizing: border-box;
   padding: 7px 7px 7px 12px;
   cursor: pointer;
   user-select: none;
   -webkit-touch-callout: none;
   user-select: none;
+
+  background-color: rgb(67, 19, 67);
 }
 
 .participant-name {

@@ -3,13 +3,38 @@
   padding: 0;
 }
 
+.body {
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  background: #fff; /* You can replace this with your snowflake image */
+  border-radius: 50%;
+  opacity: 0;
+  animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(110vh);
+    opacity: 0.5;
+  }
+}
+
+
 .general {
   display: flex;
   flex-direction: column;
-  /* background: linear-gradient(0deg, #ee82ee, black 88%); */
-  background: url(images/background2.png);
+  background: linear-gradient(0deg, #ee82ee, black 88%);
+
+  /* background: url(images/background2.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 
   /* background: linear-gradient(0deg, #dfdfdf 60%, limegreen, black); */
   /* background: linear-gradient(0deg, #ffa87b, #f35c6e, #5c3e84, #686ee2); */
@@ -91,13 +116,13 @@
   width: clamp(360px, 50vw, 500px);
   height: 77px;
   font-size: 27px;
-  /* background-color: rgb(255, 255, 255); */
   background-color: rgb(227, 227, 227);
   border-radius: 18px;
   box-sizing: border-box;
   margin-bottom: 12px;
   /* box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7); */
   padding-top: 10px;
+  z-index: 100;
 }
 
 .winner__container__animation {
@@ -115,7 +140,7 @@
   }
 }
 
-.winner__container::before {
+/* .winner__container::before {
   content: "";
   display: block;
   width: 0;
@@ -141,7 +166,7 @@
   top: 50%;
   right: 0px;
   transform: translateY(-30%);
-}
+} */
 
 
 .winner-name-animation {
@@ -178,6 +203,7 @@
   /* box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7); */
   border-radius: 18px;
   box-sizing: border-box;
+  /* z-index: 100; */
 }
 
 .dots-wrapper {
@@ -187,6 +213,8 @@
   /* outline: none; */
   /* animation: textcolor2 4s  5s linear infinite alternate; */
 }
+
+
 
 /* @keyframes anime5 {
   0% {
@@ -211,7 +239,7 @@
 }
 
 .prize-animation {
-  animation: anime3 2.3s ease 0s 1 normal forwards;
+  animation: anime3 1.5s ease 0s 1 normal forwards;
 }
 
 @keyframes anime3 {
@@ -238,13 +266,13 @@
     transform: rotate(10deg);
   }
 
-  80% {
+  /* 80% {
     transform: rotate(-8deg);
   }
 
   90% {
     transform: rotate(8deg);
-  }
+  } */
 }
 
 .prize-animation-disappearing {
@@ -298,6 +326,7 @@
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
   font-size: 25px;
   cursor: pointer;
+  z-index: 100;
 }
 
 .start__btn {

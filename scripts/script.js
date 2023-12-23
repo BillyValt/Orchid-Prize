@@ -64,13 +64,13 @@ function pickWinner() {
 
     winnerContainerEl.style.backgroundColor = 'rgb(170, 255, 0)';
 
-    winnerNameEl.innerHTML = `${winner}`;
+    winnerNameEl.innerHTML = `🎉${winner}`;
 
     winnerNameEl.classList.remove('winner-name-animation');
 
     dotsWrapper.classList.add('dots-wrapper')
 
-  }, 3500)
+  }, 3400)
 
   dotsWrapper.classList.remove('dots-wrapper')
   winnerNameEl.classList.remove('winner-name-animation');
@@ -87,7 +87,7 @@ function pickPrize() {
     const copyResultImage = document.querySelector('.container__img');
 
     copyResultImage.classList.add('prize-animation-disappearing');
-  }, 3500);
+  }, 3400);
 
 
   setTimeout(() => {
@@ -106,9 +106,9 @@ function pickPrize() {
       </div>
      `;
 
-     if(prizeNum > 1) {
-      prizeNum = 0;
-    } else {prizeNum++;}
+      if (prizeNum > 1) {
+        prizeNum = 0;
+      } else { prizeNum++; }
     } else {
       resultEl.innerHTML = ` 
       <div class="winner__incription">Подарок:</div>
@@ -129,7 +129,7 @@ function pickPrize() {
     startButton.style.display = 'none'
 
     resetButton.style.display = 'block';
-  }, 4300);
+  }, 4400);
 
 }
 
@@ -167,6 +167,47 @@ resetButton.addEventListener('click', () => {
 
   resetPrize();
 });
+
+
+//===STARS BACKGROUND===
+function createSnowflake() {
+  const snowflake = document.createElement('div');
+  snowflake.className = 'snowflake';
+  document.body.appendChild(snowflake);
+
+  const size = Math.random() * 4 + 3; // Random size between 5 and 15
+  snowflake.style.width = `${size}px`;
+  snowflake.style.height = `${size}px`;
+
+  const left = Math.random() * window.innerWidth;
+  const top = Math.random() * window.innerHeight;
+  snowflake.style.left = `${left}px`;
+  snowflake.style.top = `-10vh`;
+
+  const delay = Math.random() * 11; // Random delay between 0 and 5 seconds
+  snowflake.style.animationDelay = `-${delay}s`;
+
+  snowflake.addEventListener('animationiteration', () => {
+    document.body.removeChild(snowflake);
+    createSnowflake();
+  });
+}
+
+function createSnowflakes() {
+  const numberOfSnowflakes = 110; // Adjust the number of initial snowflakes
+  for (let i = 0; i < numberOfSnowflakes; i++) {
+    createSnowflake();
+  }
+}
+
+createSnowflakes();
+
+window.addEventListener('resize', createSnowflakes);
+
+// setInterval(() => { 
+//   createSnowflakes();
+// }, 5000)
+
 
 
 

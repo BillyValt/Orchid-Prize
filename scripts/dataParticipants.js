@@ -48,7 +48,7 @@ export const chosenWinner = [{
 }];
 
 export const threeWinners = [{
-  personName: "Гасоева Ангелина",
+  personName: "Полонская Мария",
   id: '1'
 }, {
   personName: "Макаренко Ксения",

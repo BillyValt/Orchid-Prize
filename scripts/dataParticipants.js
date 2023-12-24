@@ -26,7 +26,7 @@ export const participants = [{
   personName: 'Мамулян Милена',
   id: '9'
 }, {
-  personName: 'Ангелина Гасоева',
+  personName: 'Гасоева Ангелина',
   id: '10'
 }, {
   personName: 'Попова Маргарита',
@@ -48,12 +48,12 @@ export const chosenWinner = [{
 }];
 
 export const threeWinners = [{
-  personName: "Тюлюпина Виктория",
+  personName: "Гасоева Ангелина",
   id: '1'
 }, {
-  personName: "Новиковская Татьяна",
+  personName: "Макаренко Ксения",
   id: '2'
 }, {
-  personName: 'Лукоянова Кристина',
+  personName: 'Попова Маргарита',
   id: '3'
 }];

@@ -66,8 +66,6 @@ function pickWinner() {
 
     } else { winner = wishWinner; }
 
-    winnerContainerEl.style.backgroundColor = 'rgb(170, 255, 0)';
-
     winnerNameEl.innerHTML = `🎉${winner}`;
 
     winnerNameEl.classList.remove('winner-name-animation');

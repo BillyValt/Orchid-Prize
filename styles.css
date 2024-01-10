@@ -119,6 +119,7 @@
   text-align: center;
   font-size: 26px;
   position: relative;
+  font-family: Pixelify Sans;
 }
 
 /* .title3 {
@@ -141,7 +142,8 @@
   position: relative;
   width: clamp(360px, 50vw, 500px);
   height: 77px;
-  font-size: 27px;
+  font-size: 26px;
+  font-family: Pixelify Sans;
   background-color: rgb(227, 227, 227);
   border-radius: 18px;
   box-sizing: border-box;
@@ -195,13 +197,14 @@
 
 
 .winner__container__animation {
-  animation: anime2 0.2s ease-in-out;
+  animation: anime2 0.24s ease-in-out;
   animation-iteration-count: 11;
 }
 
 @keyframes anime2 {
   0% {
-    background-color: rgb(170, 255, 0);
+    /* background-color: rgb(170, 255, 0); */
+    background: linear-gradient(white, rgb(174, 255, 171));
   }
 
   100% {
@@ -258,7 +261,6 @@
   position: absolute;
   top: 5px;
   left: 10px;
-  font-weight: 600;
 }
 
 .result__container {
@@ -274,6 +276,7 @@
   border-radius: 18px;
   box-sizing: border-box;
   z-index: 100;
+  font-family: Pixelify Sans;
 }
 
 .dots-wrapper {
@@ -436,7 +439,8 @@ footer span {
 }
 
 footer:last-child {
-  font-family: roboto;;
+  font-family: roboto;
+  ;
   font-size: 16px;
 }
 
@@ -489,7 +493,7 @@ footer:last-child {
     font-size: 14.2px;
     min-width: 310px;
   }
-  
+
   footer span {
     margin-inline: 4px;
   }

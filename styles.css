@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .body {
@@ -9,17 +10,38 @@
 
 .snowflake {
   position: absolute;
-  background: #fff; /* You can replace this with your snowflake image */
+  background: #fff;
   border-radius: 50%;
   opacity: 0;
   animation: fall 10s linear infinite;
 }
 
+.star {
+  position: absolute;
+  background: #fff;
+  /* You can replace this with your star image */
+  border-radius: 50%;
+  animation: twinkle 1s infinite alternate;
+  /* Add twinkling animation */
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
 @keyframes fall {
   0% {
-    transform: translateY(-10vh);
-    opacity: 0.3;
+    transform: translateY(1vh);
+    opacity: 0.8;
   }
+
   100% {
     transform: translateY(110vh);
     opacity: 0.5;
@@ -41,6 +63,7 @@
   /* background: linear-gradient(0deg, #ffff8f, #ec9e69, #d56073, #7a4579); */
   overflow: hidden;
   font-family: Roboto, sans-serif, Arial, Helvetica;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
   width: 100vw;
   width: 100dvw;
   height: 800px;
@@ -66,16 +89,19 @@
   top: 0px;
   margin: 30px 0 20px 0;
   box-sizing: border-box;
+  z-index: 100;
+
 }
 
 .header>div {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
+  z-index: 100;
 }
 
 .unicorn-img {
-  width: 90px;
+  width: 80px;
   user-select: all;
 }
 
@@ -124,6 +150,49 @@
   padding-top: 10px;
   z-index: 100;
 }
+
+.name-stars1 {
+  color: #681d68;
+}
+
+.name-stars2 {
+  color: rgb(67, 64, 255);
+}
+
+.name-stars3 {
+  color: rgb(196, 196, 0);
+}
+
+.name-stars4 {
+  color: green;
+}
+
+.name-stars5 {
+  color: rgb(47, 175, 218);
+}
+
+.name-stars6 {
+  color: rgb(67, 64, 255);
+}
+
+.name-stars7 {
+  color: rgb(196, 196, 0);
+}
+
+.name-stars8 {
+  color: rgb(47, 175, 218);
+}
+
+.name-stars9 {
+  color: rgb(255, 0, 38);
+}
+
+.name-stars10 {
+  color: rgb(255, 0, 38);
+  color: green;
+}
+
+
 
 .winner__container__animation {
   animation: anime2 0.2s ease-in-out;
@@ -189,6 +258,7 @@
   position: absolute;
   top: 5px;
   left: 10px;
+  font-weight: 600;
 }
 
 .result__container {
@@ -203,7 +273,7 @@
   /* box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7); */
   border-radius: 18px;
   box-sizing: border-box;
-  z-index: 100; 
+  z-index: 100;
 }
 
 .dots-wrapper {
@@ -358,13 +428,15 @@ footer {
   left: 40px;
   right: 40px;
   color: azure;
-  font-family: Pixelify Sans, Arial;
-  font-size: 1.4rem;
   box-sizing: border-box;
 }
 
+footer span {
+  margin-inline: 10px;
+}
+
 footer:last-child {
-  font-family: roboto;
+  font-family: roboto;;
   font-size: 16px;
 }
 
@@ -388,7 +460,7 @@ footer:last-child {
   }
 
   .unicorn-img {
-    width: 90px;
+    width: 80px;
   }
 
   .title {
@@ -403,5 +475,22 @@ footer:last-child {
 
   .buttons__container {
     margin-top: 8px;
+  }
+
+  footer {
+    /* display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    right: 40px;
+    color: azure;
+    box-sizing: border-box; */
+    font-size: 14.2px;
+    min-width: 310px;
+  }
+  
+  footer span {
+    margin-inline: 4px;
   }
 }
